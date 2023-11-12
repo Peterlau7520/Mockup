@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My first Three.js app</title>
+
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+        <style>
+            /* Style for the hotspot */
+            .hotspot {
+              display: none;
+              position: absolute;
+              background-color: rgba(255, 255, 255, 0.8);
+              border-radius: 2px;
+              padding: 10px;
+              font-size: 16px;
+              pointer-events: none;
+            }
+        
+            /* Show the hotspot when the button is hovered or focused */
+            button:hover .hotspot, button:focus .hotspot {
+              display: block;
+            }
+            </style>
+</head>
+<body>
+
+    <model-viewer
+      src="./mercedes-benz_maybach_2022/scene.bin""
+      alt="A 3D model of a car"
+      camera-controls
+      auto-rotate
+      exposure="0.5"
+      shadow-intensity="1.5"
+      style="width: 100%;
+      height: 800px;
+       background-color: #808080;">
+
+      <button slot="hotspot-hand" data-position="0.5m 0.2m -0.5m" data-normal="-1m 0m 0m">
+        <div class="hotspot">
+          <h2>Hand</h2>
+          <p>Some information about the hand.</p>
+        </div>
+      </button>
+
+      <button slot="hotspot-light" data-position="0.7m 0.2m -0.5m" data-normal="-1m 0m 0m">
+        <div class="hotspot">
+          <h2>Light</h2>
+          <p>Some information about the light.</p>
+        </div>
+      </button>
+
+    </model-viewer>
+<!--    <model-viewer alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum" src="shared-assets/models/NeilArmstrong.glb" ar environment-image="shared-assets/environments/moon_1k.hdr" poster="shared-assets/models/NeilArmstrong.webp" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>-->
+<!--    <model-viewer -->
+<!--    src="./mercedes-benz_maybach_2022/scene.gltf" -->
+<!--    camera-controls -->
+<!--    auto-rotate-->
+<!--    exposure="1" shadow-softness="0.56"-->
+<!--    style="width: 100%; height: 100vh;">-->
+<!--        <button class="Hotspot" slot="hotspot-1" data-position="-2.3779745353535597m 0.6886330084271239m 0.8418117989612891m" data-normal="-0.6504762812030608m 0.41299305240500117m 0.6374302677606678m" data-visibility-attribute="visible">-->
+<!--            <div class="HotspotAnnotation">Lights</div>-->
+<!--        </button><button class="Hotspot" slot="hotspot-3" data-position="-2.0123186666064843m 0.16859910846295034m -0.9545554880973581m" data-normal="-0.00853030425216931m -0.008685142452024912m -0.9999258983594502m" data-visibility-attribute="visible">-->
+<!--            <div class="HotspotAnnotation">Tires</div>-->
+<!--        </button><button class="Hotspot" slot="hotspot-4" data-position="-1.9008705657611946m 0.9780762433835468m 0.0034152616811571335m" data-normal="-0.11276619392521334m 0.9936213861426018m 0.0005714085019051438m" data-visibility-attribute="visible">-->
+<!--            <div class="HotspotAnnotation">Engine</div>-->
+<!--        </button><button class="Hotspot" slot="hotspot-7" data-position="-0.43388961069505116m 1.154274372643619m 0.8013094827667431m" data-normal="-0.012900357104555145m 0.46991879037029577m 0.8826153812638282m" data-visibility-attribute="visible">-->
+<!--            <div class="HotspotAnnotation">Interior</div>-->
+<!--        </button>-->
+<!--        <button slot="hotspot-hand" data-position="-1 0.5 -0.5" data-normal="-0.5 0 1">Inspect</button>-->
+<!--        <div class="progress-bar hide" slot="progress-bar">-->
+<!--            <div class="update-bar"></div>-->
+<!--        </div>-->
+<!--    </model-viewer>-->
+    
+    
+    </body>
+</html>

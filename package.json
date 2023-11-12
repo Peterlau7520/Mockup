@@ -1,0 +1,16 @@
+{
+  "name": "auto-mockup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gltf_loader.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "three": "^0.156.0",
+    "three-addons": "^1.2.0"
+  }
+}
